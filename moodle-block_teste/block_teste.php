@@ -13,19 +13,17 @@ class block_teste extends block_base {
 
             if (empty($this->content)) {
              $this->content = new stdClass();
+            }
+            if(is_null($this->config)){
+              $this->conten->text = get_string('setting','block_teste');
+                return $this->conten;
+            }
+            if($this->config->title){
+              $this->title = $this->config->title;
+            }
+            $this->page->requires->main();
+                  $this->page->requires->main("/moodle-block_teste/js/main.js");
 
-             if(is_null($this->config)){
-               $this->conten->text = get_string('setting','block_teste');
-               return $this->conten;
-             }
-             if($this->config->title){
-               $this->title = $this->config->title;
-             }
-           }
-
-           $this->content         =  new stdClass();
-           $this->content->text   = 'O conteudo do nosso bloco!';
-           $this->content->footer = 'rodape do nosso bloco';
 
            return $this->content;
     }
