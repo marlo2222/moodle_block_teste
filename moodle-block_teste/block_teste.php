@@ -1,4 +1,4 @@
-<?php
+  <?php
 
 
 defined('MOODLE_INTERNAL') || die();
@@ -10,14 +10,14 @@ class block_teste extends block_base {
     }
 
     function get_content() {
-      if (empty($this->content)) {
+    /*  if (empty($this->content)) {
         $this->content = new stdClass();
       }
       if (is_null($this->config)) {
         $this->content->text .= '<div class = "teste"><div class = "titulo">';
         return $this->content;
-      }
-      /*  global $CFG;
+      }*/
+        global $CFG;
           if ($this->content !== null) {
             return $this->content;
           }
@@ -26,18 +26,20 @@ class block_teste extends block_base {
           if (!empty($this->config->text)) {
             $this->content->text = $this->config->text;
           }else {
-              $this->content->text = '';
+              $this->content->text .= '<imm src "https://alferes20-org.webnode.com/_files/200000883-61d9662d66/moral_da_duvida.jpg">';
           }
-          $this->content->text .= '<div class = "teste"><div id = "testes">';
-          if($this->config->title){
-            $this->title = $this->config->title;
-          }
-          $this->page->requires->main();
-            $this->page->requires->main("/moodle-block_teste/js/main.js");
 
-          //tentando obter o conteudo
-          $fs = get_file_storage();]
-          $files = $fs->get_area_files($this->context->id,'block_teste','content');*/
+          // $this->content->text .= '<div class = "teste"><div id = "testes">';
+          //
+          // // if($this->config->title){
+          // //   $this->title = $this->config->title;
+          // // }
+          // // $this->page->requires->main();
+          // //   $this->page->requires->main("/moodle-block_teste/js/main.js");
+          //
+          // //tentando obter o conteudo
+          // $fs = get_file_storage();
+          // $files = $fs->get_area_files($this->context->id,'block_teste','content');
 
            return $this->content;
     }
