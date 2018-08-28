@@ -1,0 +1,22 @@
+.block_slider .slider {
+	width: 100%;
+	background: transparent;
+}
+
+.block_slider #slides {
+    display: none;
+}
+
+.block_slider #slides .slidesjs-navigation {
+    margin-top: 3px;
+}
+
+.block_slider #slides .slidesjs-previous {
+    margin-right: 5px;
+    float: left;
+}
+
+.block_slider # .slidesjs-next {
+    margin-right: 5px;
+    float: left;
+}

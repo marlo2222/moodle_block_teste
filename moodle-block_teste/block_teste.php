@@ -10,7 +10,14 @@ class block_teste extends block_base {
     }
 
     function get_content() {
-        global $CFG;
+      if (empty($this->content)) {
+        $this->content = new stdClass();
+      }
+      if (is_null($this->config)) {
+        $this->content->text .= '<div class = "teste"><div class = "titulo">';
+        return $this->content;
+      }
+      /*  global $CFG;
           if ($this->content !== null) {
             return $this->content;
           }
@@ -21,14 +28,16 @@ class block_teste extends block_base {
           }else {
               $this->content->text = '';
           }
-          $this->content->text = '<div class = "teste"><div id = "testes">';
-          /* if($this->config->title){
+          $this->content->text .= '<div class = "teste"><div id = "testes">';
+          if($this->config->title){
             $this->title = $this->config->title;
           }
           $this->page->requires->main();
-            $this->page->requires->main("/moodle-block_teste/js/main.js");*/
+            $this->page->requires->main("/moodle-block_teste/js/main.js");
 
           //tentando obter o conteudo
+          $fs = get_file_storage();]
+          $files = $fs->get_area_files($this->context->id,'block_teste','content');*/
 
            return $this->content;
     }
