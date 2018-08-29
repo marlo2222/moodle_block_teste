@@ -26,10 +26,11 @@ class block_teste extends block_base {
           if (!empty($this->config->text)) {
             $this->content->text = $this->config->text;
           }else {
-              $this->content->text .= '<imm src "https://alferes20-org.webnode.com/_files/200000883-61d9662d66/moral_da_duvida.jpg">';
+              $this->content->text = '';
+              //'<imm src "https://alferes20-org.webnode.com/_files/200000883-61d9662d66/moral_da_duvida.jpg">';
           }
 
-          // $this->content->text .= '<div class = "teste"><div id = "testes">';
+          $this->content->text .= '<div class = "teste"><div id = "testes">';
           //
           // // if($this->config->title){
           // //   $this->title = $this->config->title;
