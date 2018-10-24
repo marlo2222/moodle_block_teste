@@ -11,28 +11,15 @@ class block_teste extends block_base {
 
     function get_content() {
 
-      if (empty($this->content)) {
-        $this->content = new stdClass();
-      }
-    / if (is_null($this->config)) {
-        $this->content->text = get_string('nome','block_teste');
+      if ($this->content !== null) {
         return $this->content;
       }
-        global $CFG;
-          if ($this->content !== null) {
-            return $this->content;
-          }
-          $this->content = new stdClass;
-
-          if (!empty($this->config->text)) {
-            $this->content->text = $this->config->text;
-          }else {
-              $this->content->text = 'hello wold';
-          }
-      $this->page->requires->jquery();
-      this->page->requires->js("/moodle_block_teste/moodle-block_teste/js/jquery.teste.js");
-      $this->page->requires->js("/moodle_block_teste/moodle-block_teste/js/main.js")
-
+   
+      $this->content         =  new stdClass;
+      $this->content->text   = 'BLOCK TESTE';
+      $this->content->footer = 'Ainda não tenho conteudo dinamico...';
+   
+      return $this->content;
            return $this->content;
     }
 
