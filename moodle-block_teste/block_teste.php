@@ -30,7 +30,8 @@ class block_teste extends block_base {
               $this->content->text = 'hello wold';
           }
       $this->page->requires->jquery();
-      this->page->requires->js("/moodle_block_teste/moodle-block_teste/js/main.js");
+      this->page->requires->js("/moodle_block_teste/moodle-block_teste/js/jquery.teste.js");
+      $this->page->requires->js("/moodle_block_teste/moodle-block_teste/js/main.js")
 
            return $this->content;
     }

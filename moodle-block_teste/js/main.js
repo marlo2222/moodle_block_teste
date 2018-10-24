@@ -1,3 +1,3 @@
-//var myheading = document.querySelector('h1');
-//myheading.innerHTML = 'hello world';
-window.alert(5 + 6);
+$(document).ready(function() {
+   // var countdown = $('.block-countdown-timer');
+});

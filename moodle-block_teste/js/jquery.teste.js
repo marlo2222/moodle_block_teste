@@ -1,6 +1,4 @@
-$(document).ready(function(){
 
-    // jQuery methods go here...
-    alert("hello");
- 
- });
+!(function($) {
+   alert("hello");
+})(jQuery);
