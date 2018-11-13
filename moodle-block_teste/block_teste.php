@@ -16,8 +16,8 @@ class block_teste extends block_base {
       }
    
       $this->content         =  new stdClass;
-      $this->content->text   = 'BLOCK TESTE';
-      $this->content->footer = 'Ainda não tenho conteudo dinamico...';
+      $this->content->text   = 'O conteudo do bloco';
+      $this->content->footer = 'o rodape do nosso bloco';
    
       return $this->content;
            return $this->content;
